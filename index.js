@@ -12,31 +12,31 @@ app.use(express.static(path.join(__dirname,'./public')))
 app.get('/', function(req, res){
     res.send('Hola mundo desde port 3000')
 })
-app.use('/home', function(req, res){
+app.get('/home', function(req, res){
     res.sendFile(path.join(__dirname,'src/public/home.html'))
 })
 // app.get('/home', function(req, res){
 //     res.sendFile(path.join(PUBLIC_PATH,'home.html'))
 // })
-app.use('/servicios', function(req, res){
+app.get('/servicios', function(req, res){
     res.sendFile(path.join(__dirname,'src/public/servicios.html'))
 })
 
 // app.get('/servicios', function(req, res){
 //     res.sendFile(path.join(PUBLIC_PATH,'servicios.html'))
 // })
-app.use('/contacto', function(req, res){
+app.get('/contacto', function(req, res){
     res.sendFile(path.join(__dirname,'src/public/contact.html'))
 })
 
 // app.get('/contacto', function(req, res){
 //     res.sendFile(path.join(PUBLIC_PATH,'contact.html'))
 // })
-console.log(__dirname);
+//console.log(__dirname);
 
-app.get('/contactoss', function(req, res){
-    res.send('<h1>Bienvenido a CONTACTOS</h1>')
-})
+//app.get('/contactoss', function(req, res){
+//    res.send('<h1>Bienvenido a CONTACTOS</h1>')
+//})
 
 // app.listen(0, ()=>{
 //     const port= server.address().port;
